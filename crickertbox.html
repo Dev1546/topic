@@ -1,0 +1,105 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+        
+    </head>
+    <body>
+        <h1>Indian cricket team </h1> <br>
+        <input onchange="playerinfo()" type="radio" name="player" id="d1">hardik <br>
+        <input onchange="playerinfo()" type="radio" name="player" id="d2">rohit <br>
+        <input onchange="playerinfo()" type="radio" name="player" id="d3">virat <br>
+        <input onchange="playerinfo()" type="radio" name="player" id="d4">ridhiman<br>
+        <input onchange="playerinfo()" type="radio" name="player" id="d5">sachin <br> 
+        <input onchange="playerinfo()" type="radio" name="player" id="d6">Gill  <br> 
+        <input onchange="playerinfo()" type="radio" name="player" id="d7">Suryakumar <br> 
+        <input onchange="playerinfo()" type="radio" name="player" id="d8">rashid<br>  
+        <input onchange="playerinfo()" type="radio" name="player" id="d9">Bhumara <br>
+        <input onchange="playerinfo()" type="radio" name="player" id="d10">Chahal <br>
+        <div id="playerdetali"></div>
+    
+    
+    
+        <!------------------------------------js file------------------------ -->
+        <script src="script.js">
+        
+        
+        function playerinfo() {
+    var playerDiv = document.getElementById('playerdetali');
+    var selectedPlayer;
+
+    var playerRadios = document.getElementsByName('player');
+    for (var i = 0; i < playerRadios.length; i++) {
+        if (playerRadios[i].checked) {
+            selectedPlayer = playerRadios[i].id;
+            break;
+        }
+    }
+
+    if (selectedPlayer) {
+        var playerDetails = getPlayerDetails(selectedPlayer);
+        playerDiv.innerText = playerDetails;
+    } else {
+        playerDiv.innerText = "";
+    }
+}
+
+function getPlayerDetails(playerId) {
+    var playerDetails = "";
+
+    switch (playerId) {
+        case "d1":
+            playerDetails = "Hardik Pandya - All-rounder";
+            break;
+        case "d2":
+            playerDetails = "Rohit Sharma - Opening batsman";
+            break;
+        case "d3":
+            playerDetails = "Virat Kohli - Captain and top-order batsman";
+            break;
+        case "d4":
+            playerDetails = "Ridhiman Saha - Wicketkeeper-batsman";
+            break;
+        case "d5":
+            playerDetails = "Sachin Tendulkar - Legendary batsman";
+            break;
+        case "d6":
+            playerDetails = "Shubman Gill - Top-order batsman";
+            break;
+        case "d7":
+            playerDetails = "Suryakumar Yadav - Middle-order batsman";
+            break;
+        case "d8":
+            playerDetails = "Rashid Khan - Leg-spin bowler";
+            break;
+        case "d9":
+            playerDetails = "Jasprit Bumrah - Fast bowler";
+            break;
+        case "d10":
+            playerDetails = "Yuzvendra Chahal - Leg-spin bowler";
+            break;
+        default:
+            playerDetails = "Select a player";
+    }
+
+    return playerDetails;
+}
+
+        
+
+
+
+        </script>
+    </body>
+    </html>
+    
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>validatiion check box</title>
+	<style type="text/css">
+		
+     .FOR1{
+
+     	 
+          } 
+
+	</style>
+	<script type="text/javascript">
+	
+	function validdata()
+	{
+		var name = document.getElementsById('name').value;
+		var email =document.getElementsById('email').value;
+		var password = document.getElementsById('password').value;
+		var contact = document.getElementsById('contact').value;
+		var hobby = document.getElementsById('hobby').value;
+		var xender = document.getElementsById('xender').value;
+		var city = document.getElementsById('city').value;
+
+	if(name =='')
+	 {
+	 	alert("enter name")
+	 	return false;
+
+	}
+	  if(email =='')
+	   {
+	   	alert("enter email")
+	   	return false;
+
+	 }
+	 if(password =='')
+	  {
+	  	alert("enter password")
+	  	return false;
+
+	 }
+	 if(contact no. =='')
+	  {
+	  	alert("enter contact no.")
+	  	return false;
+ 	 }
+	 if( hobby =='')
+	  {
+	  	alert("enter your hobby")
+	  	return false;
+
+	 }
+	 if(xender=='')
+	  {
+	  	alert("enter your xender")
+	  	return false;
+
+	 }
+	 if(city =='')
+	  {
+	  	alert("enter your city")
+	  	return false;
+	 }
+}
+	</script>
+</head>
+<body>
+<form onsubmit class="FOR1" ="return validdata()">
+	Name : <input type="text" id="name" name=""  placeholder="name"><br><br>
+	<!-- Email : <input type="text" id="email" name=""><br><br> -->
+	<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email :</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div> <br>
+<div class="mb-3">
+	Password : <input type="text" id="password" placeholder="Must be 8-20 characters long.".
+</div><br><br>
+	Contact no : <input type="text" id="contact no." name=""><br><br>
+	Hobby : <br><input type="checkbox" id="checkbox" name="">Music<br>
+			<input type="checkbox" id="checkbox" name="">Traveling <br>
+			<input type="checkbox" id="checkbox" name="">Reading<br>
+			<input type="checkbox" id="checkbox" name="">foddy <br>
+			<input type="checkbox" id="checkbox" name="">Sport <br>
+	<br><br>
+	Gender : <input type="radio" id="radio" name="xender">Male
+			 <input type="radio" id="radio" name="xender">Female<br><br>
+	City : <select name="" id="">
+		   	 <option>surat</option>
+		     <option>amreli</option>
+		     <option>ahemdabad</option>
+		     <option>rajkot</option>
+		     <option>vaddodara</option>
+	       </select><br><br> 
+
+	<input type  ="submit" name="" value="click here">
+</form>
+</body>
+</html>
+ 

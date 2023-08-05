@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>caculator</title>
+	<script type="text/javascript">
+
+		var fval,sval,sign;
+		function getdata(n)
+		 {
+			document.getElementById('dis').value += n;
+		 }
+
+		 function math(s) 
+		 { 
+		 	
+		 	fval = document.getElementById('dis').value;
+		 	sign=s;
+		 	document.getElementById('dis').value = "";
+		 }
+
+		 function ans()
+		  {
+		 	sval = document.getElementById('dis').value;
+
+		 	if(sign == '+')
+		 	{
+		 		var ans = parseInt(fval)+parseInt(sval);
+
+		 		document.getElementById('dis').value = ans;
+		 	}
+		 }
+		 
+		  
+	</script>
+	<style type="text/css">
+		.btn{
+			text-align: center;
+			background-color: lightslategray ;
+			height: 30px;
+			width: 50PX;
+		 	border-radius:10PX ;
+		 	font-family: clibri;
+/*		 	padding-block-end: 10 px;*/
+	
+
+
+		}
+		.num{
+/*			height: 30px;*/
+			width: 200px;
+		}
+		.ans{
+			display: flex;
+			width: 210px;
+		}
+
+	</style>
+</head>
+		
+<body>
+
+	<input type ="text" class="num" value="" readonly id="dis"><br><br>
+	<input type="button" class="btn"  value="1" onclick="getdata('1')">
+	<input type="button" class="btn"  value="2" onclick="getdata('2');">
+	<input type="button" class="btn"  value="3" onclick="getdata('3');">
+	<input type="button" class="btn" value="+" onclick="math('+');"><br>
+	<input type="button" class="btn" value="4" onclick="getdata('4');">
+	<input type="button" class="btn" value="5" onclick="getdata('5');">
+	<input type="button" class="btn"value="6" onclick="getdata('6');">
+	<input type="button" class="btn" value="-" onclick="math('-');"><br>
+	<input type="button" class="btn" value="8" onclick="getdata('8');">
+	<input type="button" class="btn" value="7" onclick="getdata('7');">
+	<input type="button" class="btn" value="9" onclick="getdata('9');">
+	<input type="button" class="btn" value="*" onclick="math('*');"><br>
+	<input type="button" class="btn" value="0" onclick="getdata('0');">
+	<input type="button" class="btn" value="%" onclick="math('%');">
+	
+	
+	<input type="button" class="btn" value="=" onclick="ans('=');">
+	<input type="button" class="btn" value="/" onclick="math('/');"><br>
+	<input type="RESET"  class="ans" value="AC" onclick="math('ac')">
+</body>
+</html>

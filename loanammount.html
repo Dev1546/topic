@@ -1,0 +1,333 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d-flex {
+            display: flex;
+        }
+
+        .with {
+            display: table-cell;
+            margin: 20px 0;
+            display: table;
+            width: 100%;
+        }
+
+        .dd {
+            display: table-cell;
+            text-align: center;
+            border: solid 1px #c9c9c9;
+            width: 33.3333%;
+            padding: 20px 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="">Principal loan ammount : </label>
+    <input type="text" name="" id="principal ammount"><br><br>
+    <label for="">intrest rate : </label>
+    <input type="text" name="" id="intrest rate"><br><br>
+    <label for="">loan term : </label>
+    <input type="text" name="" id="loan term"><br><br>
+    <button id="calculator" onclick="caculator()">calculator</button>
+
+
+
+
+
+
+    <div class="d-flex with">
+        <div class="dd">Equated Monthly Installment (EMI)</div>
+        <div class="dd">Total Interest Payable</div>
+        <div class="dd">Total Payment (Principal + Interest) </div>
+        <div class="dd">Total Payment (Principal + Interest) </div>
+        <div class="dd">Total Payment (Principal + Interest) </div>
+        <div class="dd">Total Payment (Principal + Interest) </div>
+
+    </div>
+
+    
+
+
+</body>
+
+<script>
+     function (params) {
+        
+     }
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #principal-amount,
+        #interest-rate,
+        #loan-term,
+        #answer,
+        #interest {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .my-button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            width: 100%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            overflow: hidden;
+            transition: .7s;
+        }
+
+        .my-button:before,
+        .my-button:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transform: skewX(-20deg);
+            background-color: #007bff;
+            transition: transform 0.8s ease-in-out, left 0.8s ease-in-out;
+        }
+
+        .my-button:after {
+            left: 100%;
+        }
+
+        .my-button:hover:before {
+            left: 0;
+        }
+
+        .my-button:hover:after {
+            left: 0;
+        }
+
+        .my-button:hover {
+            background-color: #007bff;
+        }
+
+        .my-button:hover span {
+            color: #fff;
+        }
+
+        .my-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        #table-div {
+            display: none;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        table th {
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            #principal-amount,
+            #interest-rate,
+            #loan-term,
+            #answer,
+            #interest {
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            table th,
+            table td {
+                padding: 5px;
+                font-size: 12px;
+            }
+
+            .my-button {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>EMI CALCULATOR</h1>
+        <label for="">Principal Loan Amount</label><br>
+        <input type="text" name="" placeholder="Enter total loan amount" id="principal-amount"><br><br>
+        <label for="">Interest Rate</label><br>
+        <input type="text" name="" placeholder="Enter interest-rate" id="interest-rate"><br><br>
+        <label for="">Loan Term</label> &nbsp;
+        <input type="radio" name="time" id="year" onclick="loanterm();" value="year">Year
+        <input type="radio" name="time" id="month" onclick="loanterm();" value="month">Month
+        <input type="text" name="" disabled id="loan-term"><br><br>
+        <button id="calculate" class="my-button" onclick="calculate();"><span>Calculate</span></button><br> <br>
+        <label for="">Total EMI</label><br>
+        <input type="text" name="" id="answer"><br> <br>
+        <label for="">Interest Amount</label><br>
+        <input type="text" name="" id="interest"><br><br>
+        <div id="table-div">
+            <table id="emi-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>EMI</th>
+                        <th>Interest</th>
+                        <th>Principal</th>
+                        <th>Payable Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    function calculate() {
+        loanterm();
+        document.getElementById('table-div').style.display = 'block';
+        var amount = document.getElementById('principal-amount').value;
+        var interest_rate = document.getElementById('interest-rate').value;
+        var total = (interest_rate / 12) / 100;
+        var loan_term = document.getElementById('loan-term').value;
+        var emi = (amount * total * Math.pow(1 + total, loan_term)) / (Math.pow(1 + total, loan_term) - 1);
+        document.getElementById('answer').value = Math.round(emi);
+        var total_interest = (emi * loan_term) - amount;
+        document.getElementById('interest').value = Math.round(total_interest);
+        var payable_value = amount;
+        var table = document.getElementById('emi-table');
+        var table_body = table.getElementsByTagName('tbody')[0];
+        table_body.innerHTML = "";
+        if (amount == '') {
+            alert('please enter amount');
+        }
+        if (interest_rate == '') {
+            alert('please enter interest rate');
+        }
+        if (loan_term == '') {
+            alert('please enter loan term');
+        }
+        for (var i = 1; i <= loan_term; i++) {
+            var interest = payable_value * (total);
+            var principal = emi - interest;
+            payable_value -= principal;
+            var row = table_body.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            cell1.innerHTML = i;
+            cell2.innerHTML = Math.round(principal);
+            cell3.innerHTML = Math.round(interest);
+            cell4.innerHTML = Math.round(emi);
+            cell5.innerHTML = Math.round(payable_value);
+        }
+    }
+
+    function loanterm() {
+        var year = document.getElementById('year');
+        var month = document.getElementById('month');
+        var loan_term = document.getElementById('loan-term');
+        loan_term.disabled = true;
+        if (year.checked == true) {
+            loan_term.disabled = false;
+            var x = (loan_term.value) * 12;
+            loan_term.value = x;
+            loan_term.placeholder = 'Enter loan term in years';
+        } else if (month.checked == true) {
+            loan_term.disabled = false;
+            loan_term.placeholder = 'Enter loan term in months';
+        }
+    }
+
+</script>
+
+</html>

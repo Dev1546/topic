@@ -1,0 +1,21 @@
+<script>
+    const mypromise = newpromise ((resolve,reject)=>
+    { set time out (()=>
+        {
+             if (true)
+             {
+                resolve("data");
+             }
+             {
+              reject("error1")
+             }
+        },3000);
+     )},
+     mypromise.then((a)=>
+     {
+        console.log(a)
+     }).catch((b) =>
+     {
+        console.log(b)
+     })
+</script>

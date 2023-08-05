@@ -1,0 +1,321 @@
+<!-- 	<!-- <!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	<script type="text/javascript">
+			
+			var temp=0;
+			function slider()
+
+			{
+				var img = document.getElementsByClassName('img')
+				
+					for (var i = 0; i < img.length; i++) {
+						img[i].style.display = "none"
+					}
+					img[temp].style.display = "block"
+				l = img.length	
+		
+			}
+
+			window.onload = function()
+			{
+				slider()
+			}
+
+
+		 function btn1()
+	 	 {
+		
+		  	temp=0;
+		  	slider();
+
+		 }
+		 function btn2()
+	 	 {
+		 
+		  	temp=1;
+		  	slider();
+
+		 }
+		 function btn3()
+	 	 {
+	 	 	temp=2;
+	 	 	slider();
+
+		 }
+		 function btn4()
+	 	 {
+	 	 	temp=3;
+	 	 	slider();
+		  
+		 }
+		 function btn5()
+	 	 {
+	 	 	temp=4;
+	 	 	slider();
+		  
+		 }
+		 function btn6() 
+		 {
+		 	temp=5
+		 	slider();
+		 }
+
+
+	</script>
+
+	</head>
+	<body>
+		<style type="text/css">
+	.img{
+		height: 100%;
+		width: 100%;
+	}	
+
+	img{
+		height: 100px;
+		width: 100px;
+	}
+	.main{
+		text-align: center;
+		margin-top: 10px;
+	}
+
+
+
+		</style>
+	<div class="image">
+		<img src="F:\New folder (2)\DEV JAVASCRIPT\1.JPG" height="500px" id="img1" width="100%" class="img">
+		<img src="F:\New folder (2)\DEV JAVASCRIPT\2.JPG" height="500px" id="img2" width="100%" class="img">
+		<img src="F:\New folder (2)\DEV JAVASCRIPT\3.JPG" height="500px" id="img3" width="100%" class="img">
+		<img src="F:\New folder (2)\DEV JAVASCRIPT\4.JPG" height="500px" id="img4" width="100%" class="img">
+		<img src="F:\New folder (2)\DEV JAVASCRIPT\5.JPG" height="500px" id="img5" width="100%" class="img">
+
+		
+	</div>	
+	<div class="main">		
+		<!-- <input type="button" value="" name="" onclick="next()" class="radhe"> -->
+		<!-- <input type="button" value="<" name="" onclick="prev()" class="radhe1"> -->
+		<button><img src="F:\New folder (2)\DEV JAVASCRIPT\1.JPG" onclick="btn1()" id="b1"></button>	
+		<button><img src="F:\New folder (2)\DEV JAVASCRIPT\2.JPG" onclick="btn2()" id="b2"></button>	
+		<button><img src="F:\New folder (2)\DEV JAVASCRIPT\3.JPG" onclick="btn3()" id="b3"></button>	
+		<button><img src="F:\New folder (2)\DEV JAVASCRIPT\4.JPG" onclick="btn4()" id="b4"></button>	
+		<button><img src="F:\New folder (2)\DEV JAVASCRIPT\5.JPG" onclick="btn5()" id="b5"></button>	
+			
+		
+	</div>
+	</body>
+	</html> 
+	<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table 6</title>
+</head>
+
+<body>
+
+	<table border="1" width="50%" align="center">
+		<caption>
+			<font color="red"> RESULT : BSC SEM5 [CBCS]</font>
+		</caption>
+		<tr>
+			<td colspan="10">Certificate showing the number of mark obtained by<br>Shri/Smt./Kumari<br>of<b>SIR
+					P.T.SARVAJANIK COLLEGE OF SCIENCE,SURAT</b><br>in each header of passing at the <b>BACHELOR OF
+					SCIENCE (FIFTH SEMESTER)</b></td>
+	</table>
+	<table border="1" width="50%" align="center">
+
+		<tr>
+			<td rowspan="2">Subject Name</td>
+			<td colspan="3">Passing mark</td>
+			<td colspan="6">Mark obtained</td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>External</td>
+			<td>Internal</td>
+			<td>Total</td>
+			<td>External</td>
+			<td>Internal</td>
+			<td>Total</td>
+			<td>Gr.</td>
+			<td>Gp.</td>
+			<td>Credit</td>
+			<!-- <td>10</td> -->
+		</tr>
+		<tr>
+			<td>LANGUAGE THROUGH LITERATURE</td>
+			<td>50/18</td>
+			<td>20</td>
+			<td>70/25</td>
+			<td>19</td>
+			<td>(09)</td>
+			<td>28</td>
+			<td>E</td>
+			<td>5</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>PAPER-VI</td>
+			<td colspan="3"></td>
+			<td colspan="3"></td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td> -->
+			<!-- <td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>PAPER-VII</td>
+			<td colspan="3"></td>
+			<td colspan="3"></td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td> -->
+			<!-- <td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>PAPER-VIII</td>
+			<td colspan="3"></td>
+			<td colspan="3"></td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td> -->
+			<!-- <td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>PAPER-XI</td>
+			<td colspan="3"></td>
+			<td colspan="3"></td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td> -->
+			<!-- <td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>PAPER-X</td>
+			<td colspan="3"></td>
+			<td colspan="3"></td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td> -->
+			<!-- <td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>PAPER-XI</td>
+			<td colspan="3"></td>
+			<td colspan="3"></td>
+			<!-- <td>4</td>
+				<td>5</td>
+				<td>6</td> -->
+			<!-- <td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td> -->
+		</tr>
+		<tr>
+			<td>PHYSICS</td>
+			<td>300/108</td>
+			<td>120</td>
+			<td>420/151</td>
+			<td>(143)</td>
+			<td>(60)</td>
+			<td>(203)</td>
+			<td>E</td>
+			<td>5</td>
+			<td>12</td>
+		</tr>
+		<tr>
+			<td>PHYSICS PRACTICAL</td>
+			<td>120/43</td>
+			<td>60</td>
+			<td>180/65</td>
+			<td>(91)</td>
+			<td>(44)</td>
+			<td>(135)</td>
+			<td>B</td>
+			<td>8</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>ELECTRONICS</td>
+			<td>50/18</td>
+			<td>20</td>
+			<td>70/25</td>
+			<td>(26)</td>
+			<td>(10)</td>
+			<td>(36)</td>
+			<td>D</td>
+			<td>6</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>NATIONAL SERVICE SCHEME </td>
+			<td colspan="8"></td>
+			<!-- <td>20</td>
+				<td>70/25</td>
+				<td>19</td>
+				<td>(09)</td>
+				<td>28</td>
+				<td>E</td>
+				<td>5</td> -->
+			<td>2</td>
+		</tr>
+		<tr>
+			<td><b>Aggregate total </b></td>
+			<td><b>520</b></td>
+			<td></td>
+			<td><b>740</b></td>
+			<td><b>279</b></td>
+			<td></td>
+			<td><b>402</b></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><b>Result</b></td>
+			<td colspan="9"><b>pass</b></td>
+			<!-- <td>120</td>
+				<td>420/151</td>
+				<td>(143)</td>
+				<td>(60)</td>
+				<td>(203)</td>
+				<td>E</td>
+				<td>5</td>
+				<td>12</td> -->
+		</tr>
+
+	</table>
+
+</body>
+
+</html>
+
+

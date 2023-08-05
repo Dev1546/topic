@@ -1,0 +1,55 @@
+.menu{
+    background-color: ;
+    font-family: Calibri;
+    color: ghostwhite;
+    text-align: center;
+    font-size: 29px;
+    font-style: uppercase;
+    font-style: bold,italic;
+}
+
+body{
+	/*background-image: url(image/shop.jpg) ;*/
+background-image: url(../image/Red-pepper-fire-fork-black-background_2560x1600.jpg);
+ text-align: center;
+  background-size: cover;
+  /*background-attachment: fixed;*/
+  color: burlywood;
+  /*background-color: black;*/
+}
+
+
+/*.logo{
+  position: fixed;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2
+}
+*/
+.card-body{
+	    font-family: calibri;
+	    font-size: 20px
+}
+
+.card-title{
+	padding-top: 30px;
+	font-weight: 600;
+}
+
+.card-text{
+	padding-top: 35px;
+	font-weight: 600;
+}
+
+.order{
+	padding-top: 20px
+}
+
+.bill{
+	height: 40px;
+	width: auto;
+	background-color: grey;
+	 /*position: fixed;*/
+	 /*z-index: 20;*/
+}
